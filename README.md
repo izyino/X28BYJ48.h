@@ -123,82 +123,83 @@ x.xms	quantidade desejada de milisegundos
 Exemplos de utilização da biblioteca
 
 No início do programa:<br>
-#include <X28BYJ48.h>
+#include <X28BYJ48.h><br>
 X28BYJ48 x(2);
 
-na sessão do setup:
+na sessão do setup:<br>
 x.begin();
 
 --------------------------------------------------------------------------------------------------------
 //movimenta o motor de passo tipo 28BYJ-48, 
 //velocidade 3, sentido horário, 2048 passos:
 
-//via chamada convencional:  
+//via chamada convencional:<br>  
 x.runStep(2048, 3, true);
 
-//via acesso direto as variáveis da biblioteca:
+//via acesso direto as variáveis da biblioteca:<br>
 x.xtipostep=2; x.xvelstep=3; x.xcwstep=1; x.xsteps=2048;
 //o motor começa a se movimentar imediatamente após a variável x.xsteps ser inicializada
 
-//para saber se o motor de passo já chegou ao destino, fazer
-//via chamada convencional:
+//para saber se o motor de passo já chegou ao destino, fazer<br>
+//via chamada convencional:<br>
 if (x.where()>0) {ainda não chegou ao destino. Está em movimento...};
 
-//via acesso direto as variáveis da biblioteca:
+//via acesso direto as variáveis da biblioteca:<br>
 if (x.xsteps>0) {ainda não chegou ao destino. Está em movimento...};
 
-//a qualquer momento o movimento do motor de passo n.0 pode ser interrompido
-//via chamada convencional:
+//a qualquer momento o movimento do motor de passo n.0 pode ser interrompido<br>
+//via chamada convencional:<br>
 x.stopStep();
 
-//via acesso direto as variáveis da biblioteca:
+//via acesso direto as variáveis da biblioteca:<br>
 x.xsteps=0;
 
 --------------------------------------------------------------------------------------------------------
 //emite 10 beeps de 2KHz de 0,5s com pausa interbeeps de 0,25s:
 
-//via chamada convencional:  
+//via chamada convencional:<br>  
 x.beep(10, 500, 2000, 250);
 
-//via acesso direto as variáveis da biblioteca:
-x.bdur=500; x.binter=250; x.bfreq=2000; x.bnum=10;
+//via acesso direto as variáveis da biblioteca:<br>
+x.bdur=500; x.binter=250; x.bfreq=2000; x.bnum=10;<br>
 //os beeps começam a ser emitidos imediatamente após a variável x.bnum ser inicializada
 
-//a qualquer momento a emissão dos beeps sonoros pode ser interrompida
-//via chamada convencional:
+//a qualquer momento a emissão dos beeps sonoros pode ser interrompida<br>
+//via chamada convencional:<br>
 x.stopBeep();
 
-//via acesso direto as variáveis da biblioteca:
+//via acesso direto as variáveis da biblioteca:<br>
 x.bnum=0;
 
 --------------------------------------------------------------------------------------------------------
 //pisca o Led 50 vezes com 0,25s aceso seguido de 0,10s apagado: 
 
-//via chamada convencional:  
-x.led(50, 250, 100);
+//via chamada convencional:<br>  
+x.led(50, 250, 100);<br>
 
-//via acesso direto as variáveis da biblioteca:
-x.ldur=250; x.linter=100; x.lnum=50;
+//via acesso direto as variáveis da biblioteca:<br>
+x.ldur=250; x.linter=100; x.lnum=50;<br>
 //o Led começa a piscar imediatamente após a variável x.lnum ser inicializada
 
-//a qualquer momento as piscadas do Led podem ser interrompidas
-//via chamada convencional:
+//a qualquer momento as piscadas do Led podem ser interrompidas<br>
+//via chamada convencional:<br>
 x.stopLed();
 
-//via acesso direto as variáveis da biblioteca:
+//via acesso direto as variáveis da biblioteca:<br>
 x.lnum=0;
 
 --------------------------------------------------------------------------------------------------------
 //contagem de 4 segundos, de forma assíncrona:
 
-//via chamada convencional:  
+//via chamada convencional:<br>  
 x.setms(4000);while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
 
-//via acesso direto as variáveis da biblioteca:
-x.xms=4000; while (x.xms>0){enquanto espera 4s, pode fazer coisas…}
+//via acesso direto as variáveis da biblioteca:<br>
+x.xms=4000; while (x.xms>0){enquanto espera 4s, pode fazer coisas…}<br>
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################<br>
+
 
 
 
