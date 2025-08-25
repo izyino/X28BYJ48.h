@@ -133,7 +133,7 @@ x.begin();
 //movimenta o motor de passo tipo 28BYJ-48, 
 //velocidade 3, sentido horário, 2048 passos:
 
-//via chamada convencional:<br>  
+//via chamada convencional:  
 x.runStep(2048, 3, true);
 
 //via acesso direto as variáveis da biblioteca:<br>
@@ -157,7 +157,7 @@ x.xsteps=0;
 --------------------------------------------------------------------------------------------------------
 //emite 10 beeps de 2KHz de 0,5s com pausa interbeeps de 0,25s:
 
-//via chamada convencional:<br>  
+//via chamada convencional:
 x.beep(10, 500, 2000, 250);
 
 //via acesso direto as variáveis da biblioteca:<br>
@@ -174,7 +174,7 @@ x.bnum=0;
 --------------------------------------------------------------------------------------------------------
 //pisca o Led 50 vezes com 0,25s aceso seguido de 0,10s apagado: 
 
-//via chamada convencional:<br>  
+//via chamada convencional: 
 x.led(50, 250, 100);<br>
 
 //via acesso direto as variáveis da biblioteca:<br>
@@ -191,7 +191,7 @@ x.lnum=0;
 --------------------------------------------------------------------------------------------------------
 //contagem de 4 segundos, de forma assíncrona:
 
-//via chamada convencional:<br>  
+//via chamada convencional:  
 x.setms(4000);while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
 
 //via acesso direto as variáveis da biblioteca:<br>
@@ -199,6 +199,7 @@ x.xms=4000; while (x.xms>0){enquanto espera 4s, pode fazer coisas…}<br>
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################<br>
+
 
 
 
