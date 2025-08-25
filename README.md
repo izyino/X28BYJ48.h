@@ -91,27 +91,27 @@ Como alternativa para algumas das funções e comandos acima, pode-se acessar di
 
 variáveis de controle dos beeps sonoros
 --------------------------------------------------------------------------------------------------------
-x.bdur	duração dos beeps (ms)
-x.binter	pausa interbeeps (ms)
-x.bfreq	frequência dos beeps (Hz)
-x.bnum	quantidade de beep+pausa a emitir 
+x.bdur	duração dos beeps (ms)<br>
+x.binter	pausa interbeeps (ms)<br>
+x.bfreq	frequência dos beeps (Hz)<br>
+x.bnum	quantidade de beep+pausa a emitir<br> 
 
 
 variáveis de controle das piscadas do Led
 --------------------------------------------------------------------------------------------------------
-x.ldur 	duração do Led aceso (ms)
-x.linter 	duração do Led apagado (ms)
-x.lnum	quantidade de piscadas
+x.ldur 	duração do Led aceso (ms)<br>
+x.linter 	duração do Led apagado (ms)<br>
+x.lnum	quantidade de piscadas<br>
 
 
 variáveis de controle dos motores de passo (índice n abaixo entre 0 e 1)
 --------------------------------------------------------------------------------------------------------
-x.xtipostep 	tipo do motor de passo (pode ser 1,2 ou 3)
-x.xsteps	quantidade de passos a mover
-x.xvelstep	velocidade (RPM)
-x.xvelnow	velocidade no momento (vide .cpp)
-x.xfase		fase antes do ciclo do motor  (vide .cpp)
-x.xcwstep	sentido (1=true=horário, 0=false=anti-horário)
+x.xtipostep 	tipo do motor de passo (pode ser 1,2 ou 3)<br>
+x.xsteps	quantidade de passos a mover<br>
+x.xvelstep	velocidade (RPM)<br>
+x.xvelnow	velocidade no momento (vide .cpp)<br>
+x.xfase		fase antes do ciclo do motor  (vide .cpp)<br>
+x.xcwstep	sentido (1=true=horário, 0=false=anti-horário)<br>
 
 
 variável de controle temporal
@@ -198,4 +198,5 @@ x.xms=4000; while (x.xms>0){enquanto espera 4s, pode fazer coisas…}
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################<br>
+
 
