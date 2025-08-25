@@ -122,7 +122,7 @@ x.xms	quantidade desejada de milisegundos
 ########################################################################################################<br>
 Exemplos de utilização da biblioteca
 
-No início do programa:
+No início do programa:<br>
 #include <X28BYJ48.h>
 X28BYJ48 x(2);
 
@@ -187,6 +187,7 @@ x.stopLed();
 
 //via acesso direto as variáveis da biblioteca:
 x.lnum=0;
+
 --------------------------------------------------------------------------------------------------------
 //contagem de 4 segundos, de forma assíncrona:
 
@@ -198,5 +199,6 @@ x.xms=4000; while (x.xms>0){enquanto espera 4s, pode fazer coisas…}
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################<br>
+
 
 
