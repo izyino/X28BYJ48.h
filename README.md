@@ -208,3 +208,4 @@ x.xms=40000(*); while (x.xms>0){enquanto espera 4s, pode fazer coisas…}<br>
 
 
 
+
