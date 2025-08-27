@@ -11,9 +11,9 @@ para incluir a biblioteca ao programa. Dependendo de onde a biblioteca estiver g
 
 comando construtor que deve ser informado logo após o include, sendo t uma variável do tipo uint8_t que define o tipo de motor conectado a CN1, sendo possível os seguintes valores:
 
-1 – Para motor 28byj-48, 2048 passos por volta, baixo torque, baixo consumo
-2 – Para motor 28byj-48, 2048 passos por volta, alto torque, alto consumo
-3 – Para motor 28byj-48, 4096 passos por volta, médio torque, médio consumo
+1 – Para motor 28byj-48, 2048 passos por volta, baixo torque, baixo consumo<br>
+2 – Para motor 28byj-48, 2048 passos por volta, alto torque, alto consumo<br>
+3 – Para motor 28byj-48, 4096 passos por volta, médio torque, médio consumo<br>
 
 --------------------------------------------------------------------------------------------------------
 x.begin();
@@ -147,7 +147,7 @@ if (x.where()>0) {ainda não chegou ao destino. Está em movimento...};
 //via acesso direto as variáveis da biblioteca:<br>
 if (x.xsteps>0) {ainda não chegou ao destino. Está em movimento...};
 
-//a qualquer momento o movimento do motor de passo n.0 pode ser interrompido<br>
+//a qualquer momento o movimento do motor de passo pode ser interrompido<br>
 //via chamada convencional:<br>
 x.stopStep();
 
@@ -161,7 +161,7 @@ x.xsteps=0;
 x.beep(10, 500, 2000, 250);
 
 //via acesso direto as variáveis da biblioteca:<br>
-x.bdur=500; x.binter=250; x.bfreq=2000; x.bnum=10;<br>
+x.bdur=5000(*); x.binter=2500(*); x.bfreq=2000; x.bnum=10;<br>
 //os beeps começam a ser emitidos imediatamente após a variável x.bnum ser inicializada
 
 //a qualquer momento a emissão dos beeps sonoros pode ser interrompida<br>
@@ -178,7 +178,7 @@ x.bnum=0;
 x.led(50, 250, 100);<br>
 
 //via acesso direto as variáveis da biblioteca:<br>
-x.ldur=250; x.linter=100; x.lnum=50;<br>
+x.ldur=2500(*); x.linter=1000(*); x.lnum=50;<br>
 //o Led começa a piscar imediatamente após a variável x.lnum ser inicializada
 
 //a qualquer momento as piscadas do Led podem ser interrompidas<br>
@@ -195,10 +195,13 @@ x.lnum=0;
 x.setms(4000);while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
 
 //via acesso direto as variáveis da biblioteca:<br>
-x.xms=4000; while (x.xms>0){enquanto espera 4s, pode fazer coisas…}<br>
+x.xms=40000(*); while (x.xms>0){enquanto espera 4s, pode fazer coisas…}<br>
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################<br>
+(*) - Esses valores são sempre multiplicados por 10 quando se tratar de acesso direto as variáveis da biblioteca<br>
+########################################################################################################<br>
+
 
 
 
