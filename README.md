@@ -114,7 +114,7 @@ x.stopStep();
 //emite 10 beeps de 2KHz de 0,5s com pausa interbeeps de 0,25s:
 
 //função principal:<br>
-x.beep(10, 500, 2000, 250);
+x.beep(10, 500, 2000, 250);<br>
 //os beeps começam a ser emitidos imediatamente após a variável x.bnum ser inicializada
 
 //a qualquer momento a emissão dos beeps sonoros pode ser interrompida<br>
@@ -141,6 +141,7 @@ while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################<br>
+
 
 
 
