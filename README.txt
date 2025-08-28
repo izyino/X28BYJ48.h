@@ -83,40 +83,7 @@ esta função interrompe a emissão de beeps sonoros
 --------------------------------------------------------------------------------------------------------
 x.stopLed();
 
-esta função interrompe as piscadas do Led
-
-########################################################################################################
-Como alternativa para algumas das funções e comandos acima, pode-se acessar diretamente algumas variáveis internas da biblioteca. Entretanto, tais acessos se feitos de forma indevida, podem provocar erros e paradas inesperadas. Recomenda-se portanto que as variáveis relacionadas sejam acessadas diretamente apenas em último caso e apenas por programadores experientes:
-
-
-variáveis de controle dos beeps sonoros
---------------------------------------------------------------------------------------------------------
-x.bdur	duração dos beeps (ms)
-x.binter	pausa interbeeps (ms)
-x.bfreq	frequência dos beeps (Hz)
-x.bnum	quantidade de beep+pausa a emitir 
-
-
-variáveis de controle das piscadas do Led
---------------------------------------------------------------------------------------------------------
-x.ldur 	duração do Led aceso (ms)
-x.linter 	duração do Led apagado (ms)
-x.lnum	quantidade de piscadas
-
-
-variáveis de controle dos motores de passo (índice n abaixo entre 0 e 1)
---------------------------------------------------------------------------------------------------------
-x.xtipostep 	tipo do motor de passo (pode ser 1,2 ou 3)
-x.xsteps	quantidade de passos a mover
-x.xvelstep	velocidade (RPM)
-x.xvelnow	velocidade no momento (vide .cpp)
-x.xfase		fase antes do ciclo do motor  (vide .cpp)
-x.xcwstep	sentido (1=true=horário, 0=false=anti-horário)
-
-
-variável de controle temporal
---------------------------------------------------------------------------------------------------------
-x.xms	quantidade desejada de milisegundos
+esta função interrompe as piscadas do Led<
 
 
 ########################################################################################################
@@ -133,72 +100,45 @@ x.begin();
 //movimenta o motor de passo tipo 28BYJ-48, 
 //velocidade 3, sentido horário, 2048 passos:
 
-//via chamada convencional:  
+//função principal:
 x.runStep(2048, 3, true);
-
-//via acesso direto as variáveis da biblioteca:
-x.xtipostep=2; x.xvelstep=3; x.xcwstep=1; x.xsteps=2048;
 //o motor começa a se movimentar imediatamente após a variável x.xsteps ser inicializada
 
 //para saber se o motor de passo já chegou ao destino, fazer
-//via chamada convencional:
 if (x.where()>0) {ainda não chegou ao destino. Está em movimento...};
 
-//via acesso direto as variáveis da biblioteca:
-if (x.xsteps>0) {ainda não chegou ao destino. Está em movimento...};
-
 //a qualquer momento o movimento do motor de passo pode ser interrompido
-//via chamada convencional:
 x.stopStep();
 
-//via acesso direto as variáveis da biblioteca:
-x.xsteps=0;
 
 --------------------------------------------------------------------------------------------------------
 //emite 10 beeps de 2KHz de 0,5s com pausa interbeeps de 0,25s:
 
-//via chamada convencional:  
+//função principal:  
 x.beep(10, 500, 2000, 250);
-
-//via acesso direto as variáveis da biblioteca:
-x.bdur=5000(*); x.binter=2500(*); x.bfreq=2000; x.bnum=10;
 //os beeps começam a ser emitidos imediatamente após a variável x.bnum ser inicializada
 
 //a qualquer momento a emissão dos beeps sonoros pode ser interrompida
-//via chamada convencional:
 x.stopBeep();
 
-//via acesso direto as variáveis da biblioteca:
-x.bnum=0;
 
 --------------------------------------------------------------------------------------------------------
 //pisca o Led 50 vezes com 0,25s aceso seguido de 0,10s apagado: 
 
-//via chamada convencional:  
+//função principal:  
 x.led(50, 250, 100);
-
-//via acesso direto as variáveis da biblioteca:
-x.ldur=2500(*); x.linter=1000(*); x.lnum=50;
 //o Led começa a piscar imediatamente após a variável x.lnum ser inicializada
 
 //a qualquer momento as piscadas do Led podem ser interrompidas
-//via chamada convencional:
 x.stopLed();
 
-//via acesso direto as variáveis da biblioteca:
-x.lnum=0;
+
 --------------------------------------------------------------------------------------------------------
 //contagem de 4 segundos, de forma assíncrona:
 
-//via chamada convencional:  
-x.setms(4000);while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
-
-//via acesso direto as variáveis da biblioteca:
-x.xms=40000(*); while (x.xms>0){enquanto espera 4s, pode fazer coisas…}
+//função principal:  
+x.setms(4000);
+while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################
-(*) - Esses valores são sempre multiplicados por 10 quando se tratar de acesso direto as variáveis da biblioteca
-########################################################################################################
-
-
