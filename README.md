@@ -137,10 +137,11 @@ x.stopLed();
 
 //função principal:<br>
 x.setms(4000);<br>
-while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
+while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}<br>
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################<br>
+
 
 
 
