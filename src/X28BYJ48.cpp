@@ -35,14 +35,13 @@ void  X28BYJ48::begin() {
 //----------------------------------------------------------------------
 void  X28BYJ48::runStep(uint32_t steps, uint8_t velstep, boolean cwstep)
 {
-
-  xsteps=steps;
   xvelstep=60000L/passos[xtipostep-1]/velstep;
   xvelnow=xvelstep;
   xcwstep=cwstep;
   if (xcwstep){xfase=-1;}
   if (!xcwstep){xfase=4; if (xtipostep==3){xfase=8;}}
   digitalWrite(0,0); digitalWrite(1,0); digitalWrite(2,0); digitalWrite(3,0);
+  xsteps=steps;
 }
 
 
@@ -56,14 +55,14 @@ uint32_t  X28BYJ48::where()
 //----------------------------------------------------------------------
 void  X28BYJ48::beep(int xbnum, int xbdur, int xbfreq, int xbinter)
 {
-  bnum=xbnum; bdur=xbdur; bfreq=xbfreq; binter=xbinter;
+  bdur=xbdur; bfreq=xbfreq; binter=xbinter; bnum=xbnum; 
 }
 
 
 //----------------------------------------------------------------------
 void  X28BYJ48::led(int xlnum, int xldur, int xlinter)
 {
-  lnum=xlnum; ldur=xldur; linter=xlinter;
+  ldur=xldur; linter=xlinter; lnum=xlnum; 
 }
 
 

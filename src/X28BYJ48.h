@@ -20,14 +20,9 @@ class X28BYJ48 {
   uint32_t getms();
   uint32_t where();
 
-  int bdur=500, binter=500, bfreq=500;
-  volatile int bnum=0;
-
-  int ldur=500, linter=500;
-  volatile int lnum=0;
-
+  volatile int bdur=500, binter=500, bfreq=500, bnum=0;
+  volatile int ldur=500, linter=500, lnum=0;
   volatile uint32_t xms=0;
-
 
   volatile uint8_t xtipostep=2;
   volatile uint32_t   xsteps=0;
