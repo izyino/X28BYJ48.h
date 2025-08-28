@@ -102,7 +102,7 @@ x.begin();
 
 //função principal:
 x.runStep(2048, 3, true);
-//o motor começa a se movimentar imediatamente após a variável x.xsteps ser inicializada
+//o motor começa a se movimentar imediatamente após a função runStep ser chamada
 
 //para saber se o motor de passo já chegou ao destino, fazer
 if (x.where()>0) {ainda não chegou ao destino. Está em movimento...};
@@ -116,7 +116,7 @@ x.stopStep();
 
 //função principal:  
 x.beep(10, 500, 2000, 250);
-//os beeps começam a ser emitidos imediatamente após a variável x.bnum ser inicializada
+//os beeps começam a ser emitidos imediatamente após a função beep ser chamada
 
 //a qualquer momento a emissão dos beeps sonoros pode ser interrompida
 x.stopBeep();
@@ -127,7 +127,7 @@ x.stopBeep();
 
 //função principal:  
 x.led(50, 250, 100);
-//o Led começa a piscar imediatamente após a variável x.lnum ser inicializada
+//o Led começa a piscar imediatamente após a função led ser chamada
 
 //a qualquer momento as piscadas do Led podem ser interrompidas
 x.stopLed();
@@ -139,6 +139,7 @@ x.stopLed();
 //função principal:  
 x.setms(4000);
 while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
-//a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
+//a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após a função setms ser chamada
 
 ########################################################################################################
+
