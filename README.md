@@ -83,8 +83,8 @@ esta função interrompe a emissão de beeps sonoros
 --------------------------------------------------------------------------------------------------------
 x.stopLed();
 
-esta função interrompe as piscadas do Led
-<br>
+esta função interrompe as piscadas do Led<br><br>
+
 ########################################################################################################<br>
 Exemplos de utilização da biblioteca
 
@@ -100,7 +100,7 @@ x.begin();
 //movimenta o motor de passo tipo 28BYJ-48, 
 //velocidade 3, sentido horário, 2048 passos:
 
-//função principal:
+//função principal:<br>
 x.runStep(2048, 3, true);
 
 //para saber se o motor de passo já chegou ao destino, fazer<br>
@@ -141,6 +141,7 @@ while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após ter sido inicializada
 
 ########################################################################################################<br>
+
 
 
 
