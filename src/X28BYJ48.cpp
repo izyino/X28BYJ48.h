@@ -22,20 +22,20 @@ void  X28BYJ48::begin() {
   ledcWrite(1, 0);                                   //grava 0 nele (silencia)
 
   const uint8_t timerNumber = 0;
-  hw_timer_t *timer1ms = NULL;
-  timer1ms = timerBegin(timerNumber, 80, true);
+  hw_timer_t *timer100us = NULL;
+  timer100us = timerBegin(timerNumber, 80, true);
   isrTable[timerNumber] = this;
   auto isr = getIsr(timerNumber);
-  timerAttachInterrupt(timer1ms, isr, false);
-  timerAlarmWrite(timer1ms, 1000, true);
-  timerAlarmEnable(timer1ms);
+  timerAttachInterrupt(timer100us, isr, false);
+  timerAlarmWrite(timer100us, 100, true);
+  timerAlarmEnable(timer100us);
 }
 
 
 //----------------------------------------------------------------------
 void  X28BYJ48::runStep(uint32_t steps, uint8_t velstep, boolean cwstep)
 {
-  xvelstep=60000L/passos[xtipostep-1]/velstep;
+  xvelstep=600000L/passos[xtipostep-1]/velstep;
   xvelnow=xvelstep;
   xcwstep=cwstep;
   if (xcwstep){xfase=-1;}
@@ -55,14 +55,14 @@ uint32_t  X28BYJ48::where()
 //----------------------------------------------------------------------
 void  X28BYJ48::beep(int xbnum, int xbdur, int xbfreq, int xbinter)
 {
-  bdur=xbdur; bfreq=xbfreq; binter=xbinter; bnum=xbnum; 
+  bdur=xbdur*10; bfreq=xbfreq; binter=xbinter*10; bnum=xbnum; 
 }
 
 
 //----------------------------------------------------------------------
 void  X28BYJ48::led(int xlnum, int xldur, int xlinter)
 {
-  ldur=xldur; linter=xlinter; lnum=xlnum; 
+  ldur=xldur*10; linter=xlinter*10; lnum=xlnum; 
 }
 
 
@@ -102,7 +102,7 @@ void  X28BYJ48::stopLed()
 
 
 //----------------------------------------------------------------------
-void IRAM_ATTR  X28BYJ48::onTimer1ms()
+void IRAM_ATTR  X28BYJ48::onTimer100us()
 {
   if (xms>0){xms--;}
 

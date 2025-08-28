@@ -20,8 +20,8 @@ class X28BYJ48 {
   uint32_t getms();
   uint32_t where();
 
-  volatile int bdur=500, binter=500, bfreq=500, bnum=0;
-  volatile int ldur=500, linter=500, lnum=0;
+  volatile int bdur=0, binter=0, bfreq=0, bnum=0;
+  volatile int ldur=0, linter=0, lnum=0;
   volatile uint32_t xms=0;
 
   volatile uint8_t xtipostep=2;
@@ -34,7 +34,7 @@ class X28BYJ48 {
 
   private:
 
-  void onTimer1ms();
+  void onTimer100us();
   void go();
   void move1();
   void move2();
@@ -64,7 +64,7 @@ template<uint8_t NUM_INTERRUPTS>
 X28BYJ48::isrFunct X28BYJ48::getIsr(uint8_t timerNumber) {
   if (timerNumber == (NUM_INTERRUPTS - 1)) {
     return [] {
-      isrTable[NUM_INTERRUPTS - 1]->onTimer1ms();
+      isrTable[NUM_INTERRUPTS - 1]->onTimer100us();
     };
   }
   return getIsr < NUM_INTERRUPTS - 1 > (timerNumber);
