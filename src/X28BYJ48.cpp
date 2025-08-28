@@ -69,14 +69,14 @@ void  X28BYJ48::led(int xlnum, int xldur, int xlinter)
 //----------------------------------------------------------------------
 void  X28BYJ48::setms(uint32_t yms)
 {
-  xms=yms;
+  xms=yms*10;
 }
 
 
 //----------------------------------------------------------------------
 uint32_t  X28BYJ48::getms()
 {
-  return xms;
+  return xms/10;
 }
 
 
@@ -219,5 +219,6 @@ void  X28BYJ48::writ(uint8_t px1, uint8_t px2, uint8_t px3, uint8_t px4)
   digitalWrite(0, px1);digitalWrite(1, px2);digitalWrite(2, px3);digitalWrite(3, px4);
 }
 //----------------------------------------------------------------------
+
 
 
