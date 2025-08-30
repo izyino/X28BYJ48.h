@@ -10,7 +10,7 @@
 // cada refeição: hora, minuto e qtde de doses (uma dose=45graus)
 //
 // IMPORTANTE: Deve-se rodar antes, pelo menos uma vez, o exemplo n.2
-// para que o nome da rede WiFi a ser utilizada, juntamente com e sua
+// para que o nome da rede WiFi a ser utilizada, juntamente com a sua
 // senha fiquem armazenadas na memória flash do ESP32 C3 supermini
 // ---------------------------------------------------------------
 //
@@ -573,3 +573,4 @@ void dumpflash()
 
 
 //////////////////////////////////// fim ///////////////////////////////////////////////
+
