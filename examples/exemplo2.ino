@@ -107,7 +107,7 @@ void setup() {
 void loop(){
   WiFiClient client = server.available();
   if (client) {
-    if (((graus==555)||(graus==999))&&(x.where(0)>0)){x.stopStep(0);} //se chegou comando via browser, aborta movimento
+    if (((graus==555)||(graus==999))&&(x.where()>0)){x.stopStep();} //se chegou comando via browser, aborta movimento
     String currentLine = "";
     while (client.connected()) {
       if (client.available()) {
@@ -371,3 +371,4 @@ void conectantp(){
     if (s<10){hora=hora+"0"+String(s);}else{hora=hora+String(s);}
   }
 } 
+
