@@ -4,8 +4,9 @@
 // apenas com as funções básicas, sem utilização de WiFi
 // ---------------------------------------------------------------
 // utilização das funções presentes na biblioteca X28BYJ48.h,
-// para controle do motor, bee, led e timer nas placas de circuito
+// para controle do motor, beep, led e timer nas placas de circuito
 // impresso modelo CTRL-28BYJ48 versão 1.1 e posteriores
+// ---------------------------------------------------------------
 // 
 
 #include <Arduino.h>

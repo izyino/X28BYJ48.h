@@ -3,7 +3,7 @@
 // EXEMPLO n.3 de utilização da biblioteca X28BYJ48.h
 // com WiFi no modo station, para manter acesso a internet
 // ------------------------------------------------------------------
-// Pressupõe um motor de passo 28byj-48 (motor n.0) conectado a CN1
+// Pressupõe um motor de passo 28byj48 conectado a CN1
 // usado para despejar uma dose de ração a cada 45graus girados
 // Acessar via browser o IP informado no monitor serial. Fazer então a
 // programação da alimentação, de até 4 vezes ao dia, informando para
@@ -573,4 +573,3 @@ void dumpflash()
 
 
 //////////////////////////////////// fim ///////////////////////////////////////////////
-

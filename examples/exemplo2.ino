@@ -3,7 +3,7 @@
 // EXEMPLO n.2 de utilização da biblioteca X28BYJ48.h
 // com WiFi no modo station, para manter acesso a internet
 // ------------------------------------------------------------------
-// Pressupõe um motor de passo 28byj-48 (motor n.0) conectado a CN1
+// Pressupõe um motor de passo 28byj48 conectado a CN1.
 // Na primeira execução deve-se conectar via access point na rede
 // PCI_UG_Tx com a senha 00000000. Acessar então o IP 192.168.4.1
 // em resposta, o programa exibe uma tela contendo a lista de redes
