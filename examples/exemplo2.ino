@@ -58,10 +58,11 @@ char     c;
 void setup() {
   Serial.begin(115200);
   EEPROM.begin(128);
-  pinMode(32, INPUT);
   x.begin();
   x.beep(2, 200, 2000, 100);  //emite 1 beep de 200ms, 2000Hz
   x.led(10, 50, 25);          //pisca o LED 10 vezes com 50ms aceso e 25ms apagado
+  x.setms(5000);
+  while (x.xms>0){}
 
   dumpflash();  //mostra o estado antes dos 128 bytes da memória flash  
 
@@ -99,7 +100,6 @@ void setup() {
   Serial.println("-----------------------------------------");
   Serial.print("Rede: ");Serial.print(ssid);Serial.println(" conectada");
   Serial.print("Acesso pelo IP fixo: ");Serial.println(IP);
-  Serial.print("Vcc no momento (5vcc): ");Serial.print(float(analogRead(32))/3103.0*5.0,1);Serial.println(" volts");
   Serial.println("-----------------------------------------");
   server.begin();
 }
