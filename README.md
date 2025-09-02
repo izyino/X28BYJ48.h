@@ -141,8 +141,46 @@ x.setms(4000);<br>
 while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}<br>
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após a função setms ser chamada
 
-#######################################################################################<br>
+--------------------------------------------------------------------------------------------------------
 
+Programas contidos no diretório “examples” da biblioteca
+
+
+Exemplo n.1:
+
+utilização das funções principais presentes na biblioteca X28BYJ48.h, para controle do motor, beep, led e timer nas placas de circuito impresso modelo CTRL-28BYJ48 versão 1.1 e posteriores. Pressupõe um motor de passo 28byj48 conectado a CN1. O programa faz movimentos repetitivos do motor, dando duas voltas a cada repetição, emitindo a cada ciclo dois beeps e três piscadas rápidas do led azul.
+
+
+
+
+
+Exemplo n.2:
+
+exemplo de utilização da placa de circuito impresso modelo CTRL-28BYJ48 versão 1.1 e posteriores, como servidor web na modalidade “access point”. Pressupõe um motor de passo 28byj48 conectado a CN1. 
+
+
+
+Exemplo n.3:
+
+utilização das funções principais presentes na biblioteca X28BYJ48.h, associadas a comunicação WiFi, incluindo um servidor web, em placas de circuito impresso modelo CTRL-28BYJ48 versão 1.1 e posteriores. Pressupõe um motor de passo 28byj48 conectado a CN1.
+
+Na primeira execução deve-se conectar via access point na rede X28BYJ48 com a senha 00000000. Acessar então o IP 192.168.4.1. Em resposta, o programa exibe uma tela contendo a lista de redes WiFi ao alcance, para que o usuário informe qual rede será utilizada, juntamente com a senha correspondente. Dependendo do número de redes ao alcance, pode demorar um certo tempo até que a lista seja exibida.
+
+Informar então o número da rede escolhida e a sua senha, seguido por um clique no botão "submit". Feito isso, basta apontar o browser para o IP fixo normalmente igual a 192.168.1.99 ou outro, conforme informado pelo monitor serial.
+
+
+
+Exemplo n.4:
+
+utilização das funções principais presentes na biblioteca X28BYJ48.h, associadas a comunicação WiFi, incluindo um servidor web, em placas de circuito impresso modelo CTRL-28BYJ48 versão 1.1 e posteriores.
+
+Esse exemplo mostra o esboço de um programa para controle de alimentação de animais via WiFi. Pressupõe um motor de passo 28byj48 conectado a CN1, supostamente usado para despejar uma dose de ração a cada 45 graus girados.
+ 
+Acessar via browser o IP informado no monitor serial. Fazer então a programação da alimentação, de até 4 vezes ao dia, informando para cada refeição: hora, minuto e a quantidade de doses (uma dose=45graus).
+
+IMPORTANTE: Deve-se rodar antes, pelo menos uma vez, o programa exemplo n.3  para que o nome da rede WiFi a ser utilizada, juntamente com a sua senha fiquem armazenadas na memória flash do ESP32 C3 supermini
+
+--------------------------------------------------------------------------------------------------------
 
 
 
