@@ -85,7 +85,7 @@ x.stopLed();
 
 esta função interrompe as piscadas do Led<br><br>
 
-########################################################################################################<br>
+#######################################################################################<br>
 Exemplos de utilização da biblioteca
 
 No início do programa:<br>
@@ -141,7 +141,8 @@ x.setms(4000);<br>
 while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}<br>
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após a função setms ser chamada
 
-########################################################################################################<br>
+#######################################################################################<br>
+
 
 
 
