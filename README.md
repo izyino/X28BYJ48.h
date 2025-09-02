@@ -86,7 +86,7 @@ x.stopLed();
 esta função interrompe as piscadas do Led<br><br>
 
 #######################################################################################<br>
-Exemplos de utilização da biblioteca
+<b>Exemplos de utilização da biblioteca</b>
 
 No início do programa:<br>
 #include <X28BYJ48.h><br>
@@ -181,6 +181,7 @@ Acessar via browser o IP informado no monitor serial. Fazer então a programaç�
 IMPORTANTE: Deve-se rodar antes, pelo menos uma vez, o programa exemplo n.3  para que o nome da rede WiFi a ser utilizada, juntamente com a sua senha fiquem armazenadas na memória flash do ESP32 C3 supermini
 
 --------------------------------------------------------------------------------------------------------
+
 
 
 
