@@ -45,7 +45,7 @@ bnum – variável inteira que especifica o número de beeps a serem emitidos
 
 bdur – variável inteira que especifica a duração de cada beep, em milisegundos 
 
-bfreq – variável inteira que especifica a freqüência dos beeps, em Hertz (Hz)
+bfreq – variável inteira que especifica a freqüência dos beeps, em Hertz (Hz)). Os beeps passivos comuns respondem bem freqüências entre 200Hz e 5000Hz
 
 binter – variável inteira que especifica a duração da pausa entre os beeps, em milisegundos 
 
@@ -142,4 +142,5 @@ while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após a função setms ser chamada
 
 ########################################################################################################
+
 
