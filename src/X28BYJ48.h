@@ -55,7 +55,7 @@ class X28BYJ48 {
   uint8_t k;
 
   //variaveis de controle dos step motors
-  uint16_t passos[3]={2048, 2048, 4096};
+  uint16_t passos[5]={0, 2048, 2048, 4096, 0};
 
 };
 
@@ -77,4 +77,5 @@ inline X28BYJ48::isrFunct X28BYJ48::getIsr<0>(uint8_t timerNumber) {
 }
 
 #endif
+
 
