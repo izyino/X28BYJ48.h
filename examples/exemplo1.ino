@@ -27,7 +27,7 @@ void setup() {
 
 void loop() {
     
-  while (x.where()!=0){}       //espera o motor chegar ao seu último destino (está parado)
+  while (x.stepstogo()!=0){}   //espera o motor chegar ao seu último destino (está parado)
 
   vel=random(4,17); sent=!sent;//gera velocidade entre 4 e 16 e sentido aleatórios 
   x.runStep(4096, vel, sent);  //move o motor 4096 passos (2 voltas), velocidade de 4 a 16 RPM, sentido horário 
@@ -37,4 +37,5 @@ void loop() {
   x.led(3, 50, 50);            //pisca o LED 3 vezes com 50ms aceso e 50ms apagado
   x.beep(2, 200, 2000, 100);   //emite 2 beep de 200ms cada, 2000Hz, intervalo entre eles de 100ms 
 }
+
 
