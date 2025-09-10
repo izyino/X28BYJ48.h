@@ -209,6 +209,7 @@ void setup()
     if(sentido==1){Serial.println("anti-horario");}else{Serial.println("horario");}
     if(angulo==0) {steps=passos;}else{steps = map(angulo, 0, 360, 0, 2048);}
 
+    where (motor.stepstogo()>0){}
     motor.runStep(steps, velocidade, sentido);
     Serial.print("Girando ");
     Serial.print(steps);
@@ -222,3 +223,4 @@ void setup()
 void loop()
 {
 }
+
