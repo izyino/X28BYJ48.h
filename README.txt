@@ -32,7 +32,7 @@ velstep – variável unint8_t que define a velocidade da movimentação, em rot
 cwstep – variável booleana que define o sentido da movimentação, sendo “true” para sentido horário e “false” para sentido anti-horário 
 
 --------------------------------------------------------------------------------------------------------
-x.where();
+x.stepstogo();
 
 esta função retorna no formato uint32_t o número de passos ainda restantes para que o motor chegue ao seu destino. Zero significa que o motor já chegou ao seu último destino e já encontra-se parado. Antes de comandar qualquer movimentação deve-se consultar esta função para ter certeza que o motor encontra-se parado
 
@@ -105,7 +105,7 @@ x.runStep(2048, 3, true);
 //o motor começa a se movimentar imediatamente após a função runStep ser chamada
 
 //para saber se o motor de passo já chegou ao destino, fazer
-if (x.where()>0) {ainda não chegou ao destino. Está em movimento...};
+if (x.stepstogo()>0) {ainda não chegou ao destino. Está em movimento...};
 
 //a qualquer momento o movimento do motor de passo pode ser interrompido
 x.stopStep();
@@ -142,5 +142,6 @@ while (x.getms()>0){enquanto espera 4s, pode fazer coisas…}
 //a variável x.xms começa a ser decrementada a cada um milisegundo imediatamente após a função setms ser chamada
 
 ########################################################################################################
+
 
 
