@@ -18,7 +18,7 @@ class X28BYJ48 {
   void stopLed();
 
   uint32_t getms();
-  uint32_t where();
+  uint32_t stepstogo();
 
   volatile int bdur=0, binter=0, bfreq=0, bnum=0;
   volatile int ldur=0, linter=0, lnum=0;
@@ -77,3 +77,4 @@ inline X28BYJ48::isrFunct X28BYJ48::getIsr<0>(uint8_t timerNumber) {
 }
 
 #endif
+
