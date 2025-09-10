@@ -1,6 +1,6 @@
 
 //
-// EXEMPLO n.2 de utilização da biblioteca X28BYJ48.h
+// EXEMPLO n.3 de utilização da biblioteca X28BYJ48.h
 // com WiFi no modo station, para manter acesso a internet
 // ------------------------------------------------------------------
 // Pressupõe um motor de passo 28byj48 conectado a CN1.
@@ -107,7 +107,7 @@ void setup() {
 void loop(){
   WiFiClient client = server.available();
   if (client) {
-    if (((graus==555)||(graus==999))&&(x.where()>0)){x.stopStep();} //se chegou comando via browser, aborta movimento
+    if (((graus==555)||(graus==999))&&(x.stepstogo()>0)){x.stopStep();} //se chegou comando via browser, aborta movimento
     String currentLine = "";
     while (client.connected()) {
       if (client.available()) {
@@ -186,7 +186,7 @@ void loop(){
             client.println(copyhtml);
 
             //starta o motor de acordo com o comando recebido
-            while(x.where()>0){}
+            while(x.stepstogo()>0){}
             if (graus==999){nsteps=2048000000;}
             if (graus!=999){nsteps=map(graus,0,360,0,1024);}
             if (sent=='D'){x.runStep(nsteps, vel, true);}else{x.runStep(nsteps, vel, false);}
@@ -371,3 +371,4 @@ void conectantp(){
     if (s<10){hora=hora+"0"+String(s);}else{hora=hora+String(s);}
   }
 } 
+
