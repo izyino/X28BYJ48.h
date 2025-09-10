@@ -1,6 +1,6 @@
 
 //
-// EXEMPLO n.3 de utilização da biblioteca X28BYJ48.h
+// EXEMPLO n.4 de utilização da biblioteca X28BYJ48.h
 // com WiFi no modo station, para manter acesso a internet
 // ------------------------------------------------------------------
 // Pressupõe um motor de passo 28byj48 conectado a CN1
@@ -445,7 +445,7 @@ void loop() {
         x.led(10, 50, 25);           //para avisar que vai servir 
         uint32_t nsteps=map(parx[82+k*3]*45,0,360,0,2048);  
         x.runStep(nsteps, 5, 1);  //roda motor 45 graus * doses a 5RPM
-        while (x.where()!=0){}      //espera rodar 
+        while (x.stepstogo()!=0){}      //espera rodar 
         serviu[k]=1;
         if (k>0){serviu[k-1]=0;}else{serviu[3]=0;}
         Serial.print("Serviu: ");Serial.print(parx[82+k*3]);
@@ -573,3 +573,4 @@ void dumpflash()
 
 
 //////////////////////////////////// fim ///////////////////////////////////////////////
+
